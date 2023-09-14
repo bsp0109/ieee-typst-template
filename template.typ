@@ -54,6 +54,14 @@
   set enum(indent: 10pt, body-indent: 9pt)
   set list(indent: 10pt, body-indent: 9pt)
 
+  // Configure tables.
+  show figure.where(kind: table): fig => {
+    set figure.caption(position: top)
+    set figure.caption(separator: [ \ ])
+    align(center, smallcaps(fig.caption))
+    align(center, fig.body)
+  }
+
   // Configure headings.
   set heading(numbering: "I.A.1.")
   show heading: it => locate(loc => {
